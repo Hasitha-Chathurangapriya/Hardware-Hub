@@ -117,6 +117,38 @@
             color: var(--secondary);
         }
 
+        /* Logo Image Styles */
+.logo-img {
+    height: 60px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Adjust header for logo image */
+.header-container {
+    padding: 5px 0; /* Reduce padding to accommodate larger logo */
+}
+
+@media (max-width: 767px) {
+    .logo-img {
+        height: 50px;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 45px;
+        max-width: 150px;
+    }
+}
+
         /* Navigation */
         .nav-links {
             display: flex;
@@ -1316,10 +1348,9 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">
-                <i class="fas fa-tools logo-icon"></i>
-                <div class="logo-text">Helo<span>Hardware</span></div>
-            </a>
+          <a href="#" class="logo">
+    <img src="HELO HARDWARE Logo.png" alt="Helo Hardware" class="logo-img">
+</a>
             
             <div class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
